@@ -70,6 +70,9 @@
     section:nth-of-type(even) {
       background-color: #f3fef9;
       border-radius: 12px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
     }
     .media img {
       max-width: 100%;
@@ -110,9 +113,19 @@
   </style>
 </head>
 <body>
+  <div data-lang="sv">
   <div class="language-switch">
-    <a href="#en">English version ↓</a>
+    <a href="#sv" onclick="toggleLanguage('sv')">Svenska</a> | 
+    <a href="#en" onclick="toggleLanguage('en')">English</a>
   </div>
+  <script>
+    function toggleLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+      });
+    }
+    window.onload = () => toggleLanguage('sv');
+  </script>
   <header>
     <img class="profile" src="erik-franklind.jpg" alt="Erik Franklind">
     <h1>Erik Franklind</h1>
@@ -163,5 +176,59 @@
     LinkedIn: <a href="https://www.linkedin.com/in/erik-franklind-712427124">linkedin.com/in/erik-franklind-712427124</a></p>
     <a href="cv-erik-franklind.pdf" class="button">Ladda ner CV (PDF)</a>
   </section>
+  </div>
+
+  <div data-lang="en" style="display:none">
+    <header>
+      <img class="profile" src="erik-franklind.jpg" alt="Erik Franklind">
+      <h1>Erik Franklind</h1>
+      <h3>E-commerce Expert & Digital Strategist</h3>
+      <p>I’m passionate about driving digital growth with over 10 years of experience in e-commerce, logistics, and business development. I help companies transform their operations through data, innovation, and modern workflows.</p>
+    </header>
+
+    <section class="media">
+      <h2>🎙️ Media & Appearances</h2>
+      <h3>Retail & Fastighetspodden – Episode 106</h3>
+      <p><strong>Success Keys for Digital Transformation</strong><br>
+      Discussing Apotea’s growth journey, digitization, and Foodla’s strategy in the food sector.</p>
+      <a href="https://open.spotify.com/episode/5JKHLvLZKKm2TUDXDuzKtO" target="_blank">Listen to the episode →</a>
+
+      <h3>Webinar with 150 Attendees</h3>
+      <p>How to build a scalable digital sales strategy with the right tools and processes.</p>
+      <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank">Watch the webinar →</a>
+
+      <h3>D-Congress 2024 – Keynote</h3>
+      <p>Spoke to 250 people on the importance of standardization, efficiency, and reduced resource consumption through GS1.</p>
+      <img src="dcongress-updated-v2.png" alt="Erik at D-Congress">
+    </section>
+
+    <section>
+      <h2>💼 Experience</h2>
+      <ul>
+        <li><strong>Technical Sales</strong>, Foodla (2024– )</li>
+        <li><strong>Price & Market Analyst</strong>, Apotea (2023–2024)</li>
+        <li><strong>Purchaser / Project Manager</strong>, Apotea (2022–2023)</li>
+        <li><strong>Logistics Manager</strong>, Delitea, Widforss, SmartaSaker (2017–2022)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧠 Skills</h2>
+      <ul>
+        <li>Digital Strategy & Sales</li>
+        <li>CRM & Customer Journeys</li>
+        <li>Business Development</li>
+        <li>Logistics Optimization</li>
+        <li>Analytical Leadership</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:erikfranklind@hotmail.com">erikfranklind@hotmail.com</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/erik-franklind-712427124">linkedin.com/in/erik-franklind-712427124</a></p>
+      <a href="cv-erik-franklind.pdf" class="button">Download CV (PDF)</a>
+    </section>
+  </div>
 </body>
 </html>
