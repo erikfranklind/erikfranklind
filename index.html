@@ -27,13 +27,14 @@
       padding: 40px 20px;
     }
     header {
-      background: var(--light-accent);
-      text-align: center;
-      padding: 60px 20px;
-      border-bottom: 4px solid var(--accent);
-      border-radius: 0 0 16px 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
+  background: linear-gradient(135deg, #2a7f62, #56b597);
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 4px solid var(--accent);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  color: white;
+}
     img.profile {
       border-radius: 50%;
       width: 120px;
@@ -87,16 +88,21 @@
       font-size: 0.9em;
     }
     .button {
-      display: inline-block;
-      padding: 12px 24px;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 16px;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  margin-top: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.button:hover {
+  background: #248a5b;
+  transform: translateY(-2px);
+}
     .button:hover {
       background: #248a5b;
     }
@@ -121,18 +127,15 @@
   <script>
   function toggleLanguage(lang) {
     document.querySelectorAll('[data-lang]').forEach(el => {
-      el.classList.remove('lang-active');
+      el.style.display = 'none';
     });
-    document.querySelector(`[data-lang="${lang}"]`).classList.add('lang-active');
+    document.querySelector(`[data-lang="${lang}"]`).style.display = 'block';
   }
   window.onload = () => toggleLanguage('sv');
 </script>
 <style>
-  [data-lang] {
-    display: none;
-  }
-  .lang-active {
-    display: block;
+  body {
+    background-color: #e8fdf3;
   }
 </style>
   <header>
@@ -183,11 +186,11 @@
   <section>
     <h2>🧠 Kompetenser</h2>
     <ul>
-      <li>Digital strategi & försäljning</li>
-      <li>CRM & kundresor</li>
-      <li>Affärsutveckling</li>
-      <li>Logistikoptimering</li>
-      <li>Analytiskt ledarskap</li>
+      <li>🔹 Digital strategi & försäljning</li>
+      <li>🔹 CRM & kundresor</li>
+      <li>🔹 Affärsutveckling</li>
+      <li>🔹 Logistikoptimering</li>
+      <li>🔹 Analytiskt ledarskap</li>
     </ul>
   </section>
 
@@ -226,21 +229,33 @@
     <section>
       <h2>💼 Experience</h2>
       <ul>
-        <li><strong>Technical Sales</strong>, Foodla (2024– )</li>
-        <li><strong>Price & Market Analyst</strong>, Apotea (2023–2024)</li>
-        <li><strong>Purchaser / Project Manager</strong>, Apotea (2022–2023)</li>
-        <li><strong>Logistics Manager</strong>, Delitea, Widforss, SmartaSaker (2017–2022)</li>
-      </ul>
+  <li>
+    <strong>Technical Sales</strong>, Foodla (2024– )<br>
+    Responsible for transforming the company from a platform model into a sales-driven organization. Created a new pricing structure and trained the entire sales team.
+  </li>
+  <li>
+    <strong>Price & Market Analyst</strong>, Apotea (2023–2024)<br>
+    Full responsibility for pricing and competitive market analysis. Increased EBIT by 3% according to Apotea’s board. Led workflow redesign based on market insights.
+  </li>
+  <li>
+    <strong>Purchaser / Project Manager</strong>, Apotea (2022–2023)<br>
+    Led GS1 implementation, streamlined purchasing, negotiated pricing, and wrote contracts with new suppliers.
+  </li>
+  <li>
+    <strong>Logistics Manager</strong>, Delitea, Widforss, SmartaSaker (2017–2022)<br>
+    Led company growth, established operational routines, managed recruitment and logistics across multiple brands.
+  </li>
+</ul>
     </section>
 
     <section>
       <h2>🧠 Skills</h2>
       <ul>
-        <li>Digital Strategy & Sales</li>
-        <li>CRM & Customer Journeys</li>
-        <li>Business Development</li>
-        <li>Logistics Optimization</li>
-        <li>Analytical Leadership</li>
+        <li>🔹 Digital Strategy & Sales</li>
+        <li>🔹 CRM & Customer Journeys</li>
+        <li>🔹 Business Development</li>
+        <li>🔹 Logistics Optimization</li>
+        <li>🔹 Analytical Leadership</li>
       </ul>
     </section>
 
