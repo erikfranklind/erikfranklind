@@ -119,13 +119,22 @@
     <a href="#en" onclick="toggleLanguage('en')">English</a>
   </div>
   <script>
-    function toggleLanguage(lang) {
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
-      });
-    }
-    window.onload = () => toggleLanguage('sv');
-  </script>
+  function toggleLanguage(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.remove('lang-active');
+    });
+    document.querySelector(`[data-lang="${lang}"]`).classList.add('lang-active');
+  }
+  window.onload = () => toggleLanguage('sv');
+</script>
+<style>
+  [data-lang] {
+    display: none;
+  }
+  .lang-active {
+    display: block;
+  }
+</style>
   <header>
     <img class="profile" src="erik-franklind.jpg" alt="Erik Franklind">
     <h1>Erik Franklind</h1>
