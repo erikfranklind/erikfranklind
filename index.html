@@ -4,71 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erik Franklind – E-handelsproffs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent: #2a7f62;
-      --light-accent: #d2f3ea;
+      --light-accent: #e9f7f3;
+      --background: #f4fdfa;
+      --text-dark: #1d1d1d;
     }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
+      background: var(--background);
+      color: var(--text-dark);
       line-height: 1.6;
-      background: #f7fdfc;
-      color: #333;
     }
     header, section, footer {
-      max-width: 900px;
+      max-width: 860px;
       margin: auto;
-      padding: 20px;
+      padding: 40px 20px;
     }
     header {
       background: var(--light-accent);
       text-align: center;
-      padding: 50px 20px;
-      border-bottom: 5px solid var(--accent);
+      padding: 60px 20px;
+      border-bottom: 4px solid var(--accent);
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     }
     img.profile {
       border-radius: 50%;
       width: 120px;
       border: 3px solid var(--accent);
+      margin-bottom: 20px;
     }
     h1 {
-      color: var(--accent);
+      font-size: 2.2em;
       margin-bottom: 5px;
+      color: var(--accent);
     }
     h2 {
       margin-top: 40px;
+      font-size: 1.4em;
       color: var(--accent);
+      border-left: 5px solid var(--accent);
+      padding-left: 12px;
     }
     h3 {
-      color: #2a2a2a;
+      color: #222;
+      margin-bottom: 5px;
+    }
+    ul li {
+      margin-bottom: 8px;
     }
     .media img {
       max-width: 100%;
-      height: auto;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-top: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
     .language-switch {
       text-align: right;
-      background: #e8f9f4;
+      background: #dbf4ec;
       padding: 10px 20px;
+      font-size: 0.9em;
     }
     .button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 24px;
       background: var(--accent);
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
+      border-radius: 6px;
+      margin-top: 16px;
+      font-weight: 600;
     }
     ul li::marker {
       color: var(--accent);
     }
     a {
       color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -125,58 +145,6 @@
     <p>Email: <a href="mailto:erikfranklind@hotmail.com">erikfranklind@hotmail.com</a><br>
     LinkedIn: <a href="https://www.linkedin.com/in/erik-franklind-712427124">linkedin.com/in/erik-franklind-712427124</a></p>
     <a href="cv-erik-franklind.pdf" class="button">Ladda ner CV (PDF)</a>
-  </section>
-
-  <hr id="en">
-
-  <header>
-    <h1>Erik Franklind</h1>
-    <h3>E-commerce Expert & Digital Strategist</h3>
-    <p>I’m passionate about driving digital growth with over a decade of experience in leading roles within e-commerce, logistics, and business development. I help companies transform their operations through data, innovation, and modern workflows.</p>
-  </header>
-
-  <section class="media">
-    <h2>🎙️ Media & Appearances</h2>
-    <h3>Podcast: Retail & Fastighetspodden – Ep. 106</h3>
-    <p><strong>Success keys for digital transformation</strong><br>
-    Discussing Apotea’s growth journey, digitalization, and Foodla’s strategy in the food sector.</p>
-    <a href="https://open.spotify.com/episode/5JKHLvLZKKm2TUDXDuzKtO" target="_blank">Listen →</a>
-
-    <h3>Webinar: 150 attendees</h3>
-    <p>How to build a scalable digital sales strategy using the right tools and processes.</p>
-    <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank">Watch on YouTube →</a>
-
-    <h3>D-Congress 2024 – Live Keynote</h3>
-    <p>Spoke in front of 250 attendees about the importance of standardization and reducing resource use through GS1 frameworks.</p>
-    <img src="dcongress-updated.png" alt="Erik speaking at D-Congress">
-  </section>
-
-  <section>
-    <h2>💼 Work Experience</h2>
-    <ul>
-      <li><strong>Technical Sales</strong>, Foodla (2024– )</li>
-      <li><strong>Price & Market Analyst</strong>, Apotea (2023–2024)</li>
-      <li><strong>Purchaser / Project Manager</strong>, Apotea (2022–2023)</li>
-      <li><strong>Logistics Manager</strong>, Delitea, Widforss, SmartaSaker (2017–2022)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🧠 Skills</h2>
-    <ul>
-      <li>Digital Strategy & Sales</li>
-      <li>CRM & Customer Journeys</li>
-      <li>Business Development</li>
-      <li>Logistics Optimization</li>
-      <li>Analytical Leadership</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📬 Contact</h2>
-    <p>Email: <a href="mailto:erikfranklind@hotmail.com">erikfranklind@hotmail.com</a><br>
-    LinkedIn: <a href="https://www.linkedin.com/in/erik-franklind-712427124">linkedin.com/in/erik-franklind-712427124</a></p>
-    <a href="cv-erik-franklind.pdf" class="button">Download CV (PDF)</a>
   </section>
 </body>
 </html>
