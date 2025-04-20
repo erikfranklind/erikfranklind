@@ -22,10 +22,13 @@
       line-height: 1.6;
     }
     header, section, footer {
-      max-width: 860px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+  max-width: 860px;
+  margin: auto;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
     header {
   background: linear-gradient(135deg, #2a7f62, #56b597);
   text-align: center;
@@ -120,7 +123,7 @@
 </head>
 <body>
   <div data-lang="sv" lang="sv" aria-label="Svenska innehåll">
-  <div class="language-switch" style="position: fixed; top: 10px; right: 20px; background: #dbf4ec; padding: 8px 14px; border-radius: 8px; z-index: 999;">
+  <div class="language-switch" style="position: fixed; top: 10px; right: 20px; background: #dbf4ec; padding: 8px 14px; border-radius: 8px; z-index: 999; display: block !important;">
     <a href="#sv" onclick="toggleLanguage('sv')">Svenska</a> | 
     <a href="#en" onclick="toggleLanguage('en')">English</a>
   </div>
@@ -129,7 +132,6 @@
     const langs = document.querySelectorAll('[data-lang]');
     langs.forEach(el => el.style.display = 'none');
     document.querySelector(`[data-lang="${lang}"]`).style.display = 'block';
-    document.querySelectorAll('.language-switch').forEach(el => el.style.display = 'block');
   }
   window.onload = () => toggleLanguage('sv');
 </script>
