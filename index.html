@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,17 +119,17 @@
   </style>
 </head>
 <body>
-  <div data-lang="sv">
-  <div class="language-switch">
+  <div data-lang="sv" lang="sv" aria-label="Svenska innehåll">
+  <div class="language-switch" style="position: fixed; top: 10px; right: 20px; background: #dbf4ec; padding: 8px 14px; border-radius: 8px; z-index: 999;">
     <a href="#sv" onclick="toggleLanguage('sv')">Svenska</a> | 
     <a href="#en" onclick="toggleLanguage('en')">English</a>
   </div>
   <script>
   function toggleLanguage(lang) {
-    document.querySelectorAll('[data-lang]').forEach(el => {
-      el.style.display = 'none';
-    });
+    const langs = document.querySelectorAll('[data-lang]');
+    langs.forEach(el => el.style.display = 'none');
     document.querySelector(`[data-lang="${lang}"]`).style.display = 'block';
+    document.querySelectorAll('.language-switch').forEach(el => el.style.display = 'block');
   }
   window.onload = () => toggleLanguage('sv');
 </script>
@@ -150,11 +150,11 @@
     <h3>Retail & Fastighetspodden – Avsnitt 106</h3>
     <p><strong>Framgångsnycklar för digital transformation</strong><br>
     Samtal om Apoteas tillväxtresa, digitalisering och Foodlas nya angreppssätt för livsmedelssektorn.</p>
-    <a href="https://open.spotify.com/episode/5JKHLvLZKKm2TUDXDuzKtO" target="_blank">Lyssna på podden →</a>
+    <a href="https://open.spotify.com/episode/5JKHLvLZKKm2TUDXDuzKtO" target="_blank" rel="noopener noreferrer">Lyssna på podden →</a>
 
     <h3>Webbinar med 150 deltagare</h3>
     <p>Hur man bygger en skalbar digital säljstrategi med rätt verktyg och processer.</p>
-    <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank">Se webbinar →</a>
+    <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank" rel="noopener noreferrer">Se webbinar →</a>
 
     <h3>D-Congress 2024 – Live på scen</h3>
     <p>Föreläste inför 250 personer om vikten av standardisering, effektivisering och minskad resursförbrukning genom GS1.</p>
@@ -202,7 +202,7 @@
   </section>
   </div>
 
-  <div data-lang="en">
+  <div data-lang="en" lang="en" aria-label="English content">
     <header>
       <img class="profile" src="erik-franklind.jpg" alt="Erik Franklind">
       <h1>Erik Franklind</h1>
