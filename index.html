@@ -8,8 +8,9 @@
   <style>
     :root {
       --accent: #2a7f62;
-      --light-accent: #e9f7f3;
+      --light-accent: #d8f5ea;
       --background: #e8fdf3;
+      --highlight: #c2ede0;
       --text-dark: #1d1d1d;
     }
     body {
@@ -31,13 +32,17 @@
       padding: 60px 20px;
       border-bottom: 4px solid var(--accent);
       border-radius: 0 0 16px 16px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     img.profile {
       border-radius: 50%;
       width: 120px;
       border: 3px solid var(--accent);
       margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    img.profile:hover {
+      transform: scale(1.05);
     }
     h1 {
       font-size: 2.2em;
@@ -50,6 +55,10 @@
       color: var(--accent);
       border-left: 5px solid var(--accent);
       padding-left: 12px;
+      background: var(--highlight);
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-radius: 6px;
     }
     h3 {
       color: #222;
@@ -58,11 +67,15 @@
     ul li {
       margin-bottom: 8px;
     }
+    section:nth-of-type(even) {
+      background-color: #f3fef9;
+      border-radius: 12px;
+    }
     .media img {
       max-width: 100%;
       border-radius: 12px;
       margin-top: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
     .language-switch {
       text-align: right;
@@ -79,6 +92,10 @@
       border-radius: 6px;
       margin-top: 16px;
       font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #248a5b;
     }
     ul li::marker {
       color: var(--accent);
