@@ -11,7 +11,7 @@ async def run_test():
         assert await page.locator("text=E-handelsproffs & Digital Strateg").is_visible(), "Svensk titel saknas"
 
         await page.click("text=English")
-        await page.wait_for_timeout(50import asyncio
+        await page.wait_for_timeout(500)
 from playwright.async_api import aimport asyncio
 from playwright.async_api import async_playwright
 
