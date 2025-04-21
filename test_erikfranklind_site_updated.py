@@ -10,7 +10,7 @@ async def run_test():
         assert await page.locator('[data-lang="sv"] img.profile').is_visible(), "Svenska profilbilden syns inte"
         assert await page.locator("text=E-handelsproffs & Digital Strateg").is_visible(), "Svensk titel saknas"
 
-        await page.locator('.language-switch a:has-text("English")').first.click()
+        await page.evaluate("document.querySelector('.language-switch a[href=\"#en\"]').click()")
         await page.wait_for_timeout(500)
 
         assert await page.locator('[data-lang="en"] img.profile').is_visible(), "Engelsk profilbild syns inte"
