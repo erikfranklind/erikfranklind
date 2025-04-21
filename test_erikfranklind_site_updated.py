@@ -65,7 +65,7 @@ async def run_test():
         print("✅ Alla tester passerade!")
         await browser.close()
 
-asyncio.run(run_test())0)
+asyncio.run(run_test())
 
         assert await page.locator('[data-lang="en"] img.profile').is_visible(), "Engelsk profilbild syns inte"
         assert await page.locator("text=E-commerce Expert & Digital Strategist").is_visible(), "Engelsk titel saknas"
