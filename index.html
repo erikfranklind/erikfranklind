@@ -22,22 +22,22 @@
       line-height: 1.6;
     }
     header, section, footer {
-  max-width: 860px;
-  margin: auto;
-  padding: 40px 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
+      max-width: 860px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
     header {
-  background: linear-gradient(135deg, #2a7f62, #56b597);
-  text-align: center;
-  padding: 60px 20px;
-  border-bottom: 4px solid var(--accent);
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  color: white;
-}
+      background: linear-gradient(135deg, #2a7f62, #56b597);
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 4px solid var(--accent);
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      color: white;
+    }
     img.profile {
       border-radius: 50%;
       width: 120px;
@@ -71,20 +71,38 @@
     ul li {
       margin-bottom: 8px;
     }
-    section:nth-of-type(even) {
-      background-color: #f3fef9;
-      border-radius: 12px;
-      padding-top: 20px;
-      padding-bottom: 40px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    }
     .media img {
-  max-width: 300px;
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
+      max-width: 300px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .portfolio-item {
+      background: #f3fef9;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .portfolio-item img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .portfolio-item h4 {
+      margin: 0;
+      font-size: 1.1em;
+      color: var(--accent);
+    }
+    .portfolio-item p {
+      font-size: 0.95em;
+    }
     .language-switch {
       text-align: right;
       background: #dbf4ec;
@@ -92,23 +110,20 @@
       font-size: 0.9em;
     }
     .button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  margin-top: 16px;
-  font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-.button:hover {
-  background: #248a5b;
-  transform: translateY(-2px);
-}
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      margin-top: 16px;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
     .button:hover {
       background: #248a5b;
+      transform: translateY(-2px);
     }
     ul li::marker {
       color: var(--accent);
@@ -127,216 +142,75 @@
     <a href="#sv" onclick="toggleLanguage('sv')">Svenska</a> |
     <a href="#en" onclick="toggleLanguage('en')">English</a>
   </div>
-  <div data-lang="sv" lang="sv" aria-label="Svenska innehåll">
-  <div class="language-switch" style="position: fixed; top: 10px; right: 20px; background: #dbf4ec; padding: 8px 14px; border-radius: 8px; z-index: 999; display: block !important;">
-    <a href="#sv" onclick="toggleLanguage('sv')">Svenska</a> | 
-    <a href="#en" onclick="toggleLanguage('en')">English</a>
-  </div>
+
   <script>
-  function toggleLanguage(lang) {
-    const langs = document.querySelectorAll('[data-lang]');
-    langs.forEach(el => el.style.display = 'none');
-    document.querySelector(`[data-lang="${lang}"]`).style.display = 'block';
-  }
-  window.onload = () => toggleLanguage('sv');
-</script>
-<style>
-  body {
-    background-color: #e8fdf3;
-  }
-</style>
+    function toggleLanguage(lang) {
+      const langs = document.querySelectorAll('[data-lang]');
+      langs.forEach(el => el.style.display = 'none');
+      document.querySelector(`[data-lang="${lang}"]`).style.display = 'block';
+    }
+    window.onload = () => toggleLanguage('sv');
+  </script>
+
+  <div data-lang="sv" lang="sv">
+    <header>
+      <img class="profile" src="1702590479609 (1).jpg" alt="Erik Franklind">
+      <h1>Erik Franklind</h1>
+      <h3>E-handelsproffs & Digital Strateg</h3>
+      <p>Jag brinner för att driva digital tillväxt och har över 10 års erfarenhet från ledande roller inom e-handel, logistik och affärsutveckling. Jag hjälper företag att transformera sina affärer genom data, innovation och moderna arbetsmetoder.</p>
+    </header>
+  </div>
+
+  <section>
+    <h2>🗂️ Portfolio – Utvalda projekt</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="dcongress.jpg" alt="D-Congress Presentation">
+        <h4>D-Congress 2024</h4>
+        <p>Keynote på Sveriges största e-handelsmässa. Fokus: GS1, skalbarhet & automation.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="apotea-dashboard.png" alt="Apotea KPI Dashboard">
+        <h4>Prisoptimering på Apotea</h4>
+        <p>Analys av marginaldata som ledde till 3% EBIT-ökning. Implementation i hela flödet.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="foodla-sales.png" alt="Foodla CRM system">
+        <h4>Säljdrivet system för Foodla</h4>
+        <p>Transformation från plattform till sälj. Byggde CRM-process & utbildning för hela teamet.</p>
+      </div>
+    </div>
+  </section>
+
+<div data-lang="en" lang="en" style="display: none;">
   <header>
     <img class="profile" src="1702590479609 (1).jpg" alt="Erik Franklind">
     <h1>Erik Franklind</h1>
-    <h3>E-handelsproffs & Digital Strateg</h3>
-    <p>Jag brinner för att driva digital tillväxt och har över 10 års erfarenhet från ledande roller inom e-handel, logistik och affärsutveckling. Jag hjälper företag att transformera sina affärer genom data, innovation och moderna arbetsmetoder.</p>
+    <h3>E-commerce Expert & Digital Strategist</h3>
+    <p>I’m passionate about driving digital growth and have over 10 years of experience in leading roles across e-commerce, logistics, and business development. I help companies transform their operations through data, innovation, and modern methods.</p>
   </header>
 
-  <section class="media">
-    <h2>🎙️ Media & Scenframträdanden</h2>
-    <h3>Retail & Fastighetspodden – Avsnitt 106</h3>
-<p><strong>Framgångsnycklar för digital transformation</strong><br>
-Samtal om Apoteas tillväxtresa, digitalisering och Foodlas nya angreppssätt för livsmedelssektorn.</p>
-<img src="podcast-cover.jpg" alt="Retail & Fastighetspodden omslag" class="media">
-<a href="https://open.spotify.com/episode/5JKHLvLZKKm2TUDXDuzKtO" target="_blank" rel="noopener noreferrer">Lyssna på podden →</a>
-
-    <h3>Webbinar med 150 deltagare</h3>
-    <p>Hur man bygger en skalbar digital säljstrategi med rätt verktyg och processer.</p>
-    <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank" rel="noopener noreferrer">Se webbinar →</a>
-
-    <h3>D-Congress 2024 – Live på scen</h3>
-    <p>Föreläste inför 250 personer om vikten av standardisering, effektivisering och minskad resursförbrukning genom GS1.</p>
-    <img src="dcongress-updated-v2.png" alt="Erik föreläser på D-Congress">
-  </section>
-
   <section>
-    <h2>💼 Erfarenhet</h2>
-    <ul>
-  <li>
-    <strong>Technical Sales</strong>, Foodla (2024– )<br>
-    Ansvar för att transformera företagets organisation från plattform till försäljningsdriven. Byggde nytt prissystem och utbildade hela säljteamet.
-  </li>
-  <li>
-    <strong>Price & Market Analyst</strong>, Apotea (2023–2024)<br>
-    Helhetsansvar för prissättning och marknadsanalys. Lyckades öka EBIT med 3% enligt Apoteas styrelse. Analyserade hela marknaden och implementerade nya arbetsflöden.
-  </li>
-  <li>
-    <strong>Purchaser / Project Manager</strong>, Apotea (2022–2023)<br>
-    Ledde GS1-implementering, effektiviserade inköp, förhandlade priser och skrev kontrakt med nya leverantörer.
-  </li>
-  <li>
-    <strong>Logistics Manager</strong>, Delitea, Widforss, SmartaSaker (2017–2022)<br>
-    Drev bolagstillväxt, etablerade nya rutiner, ansvarade för rekrytering och drift. Flera bolag växte kraftigt under perioden.
-  </li>
-</ul>
+    <h2>🗂️ Portfolio – Selected Projects</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="dcongress.jpg" alt="D-Congress Presentation">
+        <h4>D-Congress 2024</h4>
+        <p>Keynote at Sweden’s largest e-commerce conference. Focus: GS1, scalability & automation.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="apotea-dashboard.png" alt="Apotea KPI Dashboard">
+        <h4>Price Optimization at Apotea</h4>
+        <p>Margin analysis leading to a 3% EBIT increase. Full implementation across workflows.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="foodla-sales.png" alt="Foodla CRM system">
+        <h4>Sales-Driven Transformation for Foodla</h4>
+        <p>Shifted from platform to sales focus. Built CRM and training program for entire team.</p>
+      </div>
+    </div>
   </section>
+</div>
 
-<section>
-  <h2>📄 CV – Sammanfattning</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-    <div style="flex: 1 1 250px; background: #f3fef9; padding: 16px; border-radius: 12px;">
-      <h3 style="margin-top: 0;">💼 Roller</h3>
-      <p>Foodla, Apotea, Delitea, m.fl. med fokus på analys, strategi, logistik och försäljning.</p>
-    </div>
-    <div style="flex: 1 1 250px; background: #f3fef9; padding: 16px; border-radius: 12px;">
-      <h3 style="margin-top: 0;">🧠 Färdigheter</h3>
-      <p>Datadrivet ledarskap, CRM, prissättning, optimering av arbetsflöden, förhandling.</p>
-    </div>
-    <div style="flex: 1 1 250px; background: #f3fef9; padding: 16px; border-radius: 12px;">
-      <h3 style="margin-top: 0;">🎓 Utbildning</h3>
-      <p>Ekonomie kandidat, Uppsala Universitet. Examensarbete om motivation inom banksektorn.</p>
-    </div>
-  </div>
-  <a href="Erik-Franklind-CV-Styled-MedBild.pdf" class="button">Ladda ner fullständigt CV (PDF)</a>
-</section>
-
-<section>
-  <h2>🧠 Kompetenser</h2>
-    <ul>
-      <li>🔹 Digital strategi & försäljning</li>
-      <li>🔹 CRM & kundresor</li>
-      <li>🔹 Affärsutveckling</li>
-      <li>🔹 Logistikoptimering</li>
-      <li>🔹 Analytiskt ledarskap</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📬 Kontakt</h2>
-    <p>Email: <a href="mailto:erikfranklind@hotmail.com">erikfranklind@hotmail.com</a><br>
-    LinkedIn: <a href="https://www.linkedin.com/in/erik-franklind-712427124">linkedin.com/in/erik-franklind-712427124</a></p>
-    <a href="Erik-Franklind-CV-Styled-MedBild.pdf" class="button">Ladda ner CV (PDF)</a>
-  </section>
-  </div>
-
-  <div data-lang="en" lang="en" aria-label="English content">
-    <header>
-    <img class="profile" src="1702590479609 (1).jpg" alt="Erik Franklind">
-      <h1>Erik Franklind</h1>
-      <h3>E-commerce Expert & Digital Strategist</h3>
-      <p>I’m passionate about driving digital growth with over 10 years of experience in e-commerce, logistics, and business development. I help companies transform their operations through data, innovation, and modern workflows.</p>
-    </header>
-
-    <section class="media">
-      <h2>🎙️ Media & Appearances</h2>
-      <h3>Retail & Fastighetspodden – Episode 106</h3>
-<p><strong>Success Keys for Digital Transformation</strong><br>
-Discussing Apotea’s growth journey, digitization, and Foodla’s strategy in the food sector.</p>
-<img src="podcast-cover.jpg" alt="Retail & Fastighetspodden cover image" class="media">
-<a href="https://open.spotify.com/episode/5JKHLvLZKKm2TUDXDuzKtO" target="_blank" rel="noopener noreferrer">Listen to the episode →</a>
-
-      <h3>Webinar with 150 Attendees</h3>
-      <p>How to build a scalable digital sales strategy with the right tools and processes.</p>
-      <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank">Watch the webinar →</a>
-
-      <h3>D-Congress 2024 – Keynote</h3>
-      <p>Spoke to 250 people on the importance of standardization, efficiency, and reduced resource consumption through GS1.</p>
-      <img src="dcongress-updated-v2.png" alt="Erik at D-Congress">
-    </section>
-
-    <section>
-      <h2>💼 Experience</h2>
-      <ul>
-  <li>
-    <strong>Technical Sales</strong>, Foodla (2024– )<br>
-    Responsible for transforming the company from a platform model into a sales-driven organization. Created a new pricing structure and trained the entire sales team.
-  </li>
-  <li>
-    <strong>Price & Market Analyst</strong>, Apotea (2023–2024)<br>
-    Full responsibility for pricing and competitive market analysis. Increased EBIT by 3% according to Apotea’s board. Led workflow redesign based on market insights.
-  </li>
-  <li>
-    <strong>Purchaser / Project Manager</strong>, Apotea (2022–2023)<br>
-    Led GS1 implementation, streamlined purchasing, negotiated pricing, and wrote contracts with new suppliers.
-  </li>
-  <li>
-    <strong>Logistics Manager</strong>, Delitea, Widforss, SmartaSaker (2017–2022)<br>
-    Led company growth, established operational routines, managed recruitment and logistics across multiple brands.
-  </li>
-</ul>
-    </section>
-
-<section>
-  <h2>📄 CV – Summary</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-    <div style="flex: 1 1 250px; background: #f3fef9; padding: 16px; border-radius: 12px;">
-      <h3 style="margin-top: 0;">💼 Roles</h3>
-      <p>Foodla, Apotea, Delitea and more, with focus on analysis, strategy, logistics and sales.</p>
-    </div>
-    <div style="flex: 1 1 250px; background: #f3fef9; padding: 16px; border-radius: 12px;">
-      <h3 style="margin-top: 0;">🧠 Skills</h3>
-      <p>Data-driven leadership, CRM, pricing strategy, workflow optimization, negotiation.</p>
-    </div>
-    <div style="flex: 1 1 250px; background: #f3fef9; padding: 16px; border-radius: 12px;">
-      <h3 style="margin-top: 0;">🎓 Education</h3>
-      <p>Bachelor’s in Economics, Uppsala University. Thesis on motivation in the banking sector.</p>
-    </div>
-  </div>
-  <a href="Erik-Franklind-CV-English.pdf" class="button">Download full CV (PDF)</a>
-</section>
-
-<section>
-  <h2>🧠 Skills</h2>
-      <ul>
-        <li>🔹 Digital Strategy & Sales</li>
-        <li>🔹 CRM & Customer Journeys</li>
-        <li>🔹 Business Development</li>
-        <li>🔹 Logistics Optimization</li>
-        <li>🔹 Analytical Leadership</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📬 Contact</h2>
-      <p>Email: <a href="mailto:erikfranklind@hotmail.com">erikfranklind@hotmail.com</a><br>
-      LinkedIn: <a href="https://www.linkedin.com/in/erik-franklind-712427124">linkedin.com/in/erik-franklind-712427124</a></p>
-      <a href="Erik-Franklind-CV-English.pdf" class="button">Download CV (PDF)</a>
-    </section>
-  </div>
-<script type="application/json" id="version-history">
-[
-  {
-    "timestamp": "2025-04-21T22:10:00Z",
-    "change": "Språkväxlare flyttad utanför språkinnehåll",
-    "reason": "Knapparna försvann efter språkbyte",
-    "by": "AI Agent",
-    "status": "implemented"
-  },
-  {
-    "timestamp": "2025-04-21T22:15:00Z",
-    "change": "Layout: Vit kant fixad, sektioner harmoniserade",
-    "reason": "Visuell bug i padding och färgövergång",
-    "by": "AI Agent",
-    "status": "implemented"
-  },
-  {
-    "timestamp": "2025-04-21T22:18:00Z",
-    "change": "Erfarenhetsavsnitt uppdaterat (sv + en)",
-    "reason": "Mer säljande text, konkret resultat",
-    "by": "AI Agent",
-    "status": "implemented"
-  }
-]
-</script>
 </body>
 </html>
