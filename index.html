@@ -119,49 +119,38 @@
     <a href="#sv" onclick="toggleLanguage('sv')">Svenska</a> |
     <a href="#en" onclick="toggleLanguage('en')">English</a>
   </div>
-
-  <script>
-    function toggleLanguage(lang) {
-      const langs = document.querySelectorAll('[data-lang]');
-      langs.forEach(el => el.style.display = 'none');
-      document.querySelector(`[data-lang="${lang}"]`).style.display = 'block';
-    }
-    window.onload = () => toggleLanguage('sv');
-  </script>
-
-  <div data-lang="sv" lang="sv">
+  <div data-lang="sv" lang="sv" aria-label="Svenska innehåll">
     <header>
-      <img class="profile" src="githubbild.png" alt="Profilbild Erik Franklind">
+      <img class="profile" src="githubbild.png" alt="Erik Franklind">
       <h1>Erik Franklind</h1>
       <h3>E-handelsproffs & Digital Strateg</h3>
       <p>Drivet e-handelsproffs med starkt affärsfokus och bakgrund inom analys, försäljning och logistik. Bidrar till skalbar tillväxt genom data och moderna arbetsmetoder.</p>
     </header>
 
     <section>
-      <h2>💡 Färdigheter från LinkedIn</h2>
+      <h2>🔑 Färdigheter från LinkedIn</h2>
       <ul>
-        <li>🔹 Digital strategi & tillväxt</li>
-        <li>🔹 E-handel & kundresor</li>
-        <li>🔹 CRM & försäljningsprocesser</li>
-        <li>🔹 Prissättning & marknadsanalys</li>
-        <li>🔹 Effektiv logistik & flöden</li>
+        <li>Digital strategi & tillväxt</li>
+        <li>E-handel & kundresor</li>
+        <li>CRM & försäljningsprocesser</li>
+        <li>Prissättning & marknadsanalys</li>
+        <li>Effektiv logistik & flöden</li>
       </ul>
     </section>
 
     <section>
-      <h2>📄 CV – Sammanfattning</h2>
+      <h2>📋 CV – Sammanfattning</h2>
       <ul>
-        <li><strong>Foodla (2024– )</strong>: Ledde omställning till säljdriven organisation och skapade nytt CRM-flöde.</li>
-        <li><strong>Apotea (2022–2024)</strong>: Prissättning, marknadsanalys och projektledning – ökade EBIT med 3%.</li>
-        <li><strong>Delitea, Widforss, SmartaSaker</strong>: Operativt ansvar för tillväxt, rekrytering & lagerlogistik.</li>
+        <li><strong>Foodla (2024– ):</strong> Ledde omställning till säljdriven organisation och skapade nytt CRM-flöde.</li>
+        <li><strong>Apotea (2022–2024):</strong> Prissättning, marknadsanalys och projektledning – ökade EBIT med 3%. Operativt ansvarig för inköpsteamet som Team Lead.</li>
+        <li><strong>Delitea, Widforss, SmartaSaker:</strong> Operativt ansvar för tillväxt, rekrytering & lagerlogistik.</li>
       </ul>
     </section>
 
     <section class="media">
       <h2>🎙️ Media & Scenframträdanden</h2>
       <h3>Retail & Fastighetspodden – Avsnitt 106</h3>
-      <p><strong>Framgångsnycklar för digital transformation</strong><br>
-      Samtal om Apoteas tillväxtresa, digitalisering och Foodlas nya angreppssätt för livsmedelssektorn.</p>
+      <p><strong>Framgångsnycklar för digital transformation</strong><br> Samtal om Apoteas tillväxtresa, digitalisering och Foodlas nya angreppssätt för livsmedelssektorn.</p>
       <img src="podcast-cover.jpg" alt="Retail & Fastighetspodden omslag">
       <a href="https://open.spotify.com/episode/5JKHLvLZKKm2TUDXDuzKtO" target="_blank" rel="noopener noreferrer">Lyssna på podden →</a>
 
@@ -171,7 +160,7 @@
 
       <h3>Webbinar med 150 deltagare</h3>
       <p>Hur man bygger en skalbar digital säljstrategi med rätt verktyg och processer.</p>
-      <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank" rel="noopener noreferrer">Se webbinar →</a>
+      <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank">Se webbinar →</a>
     </section>
 
     <section>
@@ -181,49 +170,48 @@
     </section>
   </div>
 
-  <div data-lang="en" lang="en" style="display: none;">
+  <div data-lang="en" lang="en" aria-label="English content" style="display:none;">
     <header>
-      <img class="profile" src="githubbild.png" alt="Profile photo Erik Franklind">
+      <img class="profile" src="githubbild.png" alt="Erik Franklind">
       <h1>Erik Franklind</h1>
       <h3>E-commerce Expert & Digital Strategist</h3>
-      <p>Driven e-commerce professional with a strong business focus and background in analytics, sales, and logistics. Enables scalable growth through data and modern practices.</p>
+      <p>Driven e-commerce professional with a strong business focus and background in analytics, sales, and logistics. Accelerates scalable growth through data and modern work methods.</p>
     </header>
 
     <section>
-      <h2>💡 Skills from LinkedIn</h2>
+      <h2>🔑 Skills from LinkedIn</h2>
       <ul>
-        <li>🔹 Digital strategy & growth</li>
-        <li>🔹 E-commerce & customer journeys</li>
-        <li>🔹 CRM & sales processes</li>
-        <li>🔹 Pricing & market analysis</li>
-        <li>🔹 Efficient logistics & workflows</li>
+        <li>Digital strategy & growth</li>
+        <li>E-commerce & customer journeys</li>
+        <li>CRM & sales processes</li>
+        <li>Pricing & market analysis</li>
+        <li>Efficient logistics & workflows</li>
       </ul>
     </section>
 
     <section>
-      <h2>📄 CV – Summary</h2>
+      <h2>📋 CV – Summary</h2>
       <ul>
-        <li><strong>Foodla (2024– )</strong>: Led organizational shift to sales-driven model and built new CRM workflows.</li>
-        <li><strong>Apotea (2022–2024)</strong>: Led pricing, market analysis, and projects – increased EBIT by 3%.</li>
-        <li><strong>Delitea, Widforss, SmartaSaker</strong>: Hands-on growth, recruitment & warehouse operations.</li>
+        <li><strong>Foodla (2024– ):</strong> Led the shift to a sales-driven organization and implemented a new CRM flow.</li>
+        <li><strong>Apotea (2022–2024):</strong> Pricing, market analysis, and project leadership – increased EBIT by 3%. Operative lead for the purchasing team as Team Lead.</li>
+        <li><strong>Delitea, Widforss, SmartaSaker:</strong> Operational responsibility for growth, recruitment, and warehouse logistics.</li>
       </ul>
     </section>
 
     <section class="media">
-      <h2>🎙️ Media & Appearances</h2>
+      <h2>🎙️ Media & Public Appearances</h2>
       <h3>Retail & Fastighetspodden – Episode 106</h3>
-      <p><strong>Success Keys for Digital Transformation</strong><br>
-      Conversation about Apotea’s growth, digitalization, and Foodla’s new approach in the food sector.</p>
+      <p><strong>Keys to Digital Transformation</strong><br> Discussing Apotea’s growth journey, digitization, and Foodla’s strategy for the grocery sector.</p>
       <img src="podcast-cover.jpg" alt="Retail & Fastighetspodden cover">
       <a href="https://open.spotify.com/episode/5JKHLvLZKKm2TUDXDuzKtO" target="_blank" rel="noopener noreferrer">Listen to the episode →</a>
 
       <h3>D-Congress 2024 – Live on Stage</h3>
-      <p>Keynote for 250 people about the power of standardization, efficiency, and reduced resource use through GS1.</p>
-      <img src="dcongress-updated-v2.png" alt="Erik on stage at D-Congress">
+      <p>Presented to 250 attendees on the importance of standardization, efficiency, and reduced resource usage through GS1.</p>
+      <img src="dcongress-updated-v2.png" alt="Erik presenting at D-Congress">
 
-      <h3>Webinar with 150 attendees</h3>
+      <h3>Webinar with 150 Participants</h3>
       <p>How to build a scalable digital sales strategy with the right tools and processes.</p>
-      <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank" rel="noopener noreferrer">Watch the webinar →</a>
+      <a href="https://www.youtube.com/watch?v=9ZGKYMKsWmQ" target="_blank">Watch the webinar →</a>
     </section>
 
     <section>
@@ -232,5 +220,14 @@
       LinkedIn: <a href="https://www.linkedin.com/in/erik-franklind-712427124">linkedin.com/in/erik-franklind</a></p>
     </section>
   </div>
+
+  <script>
+    function toggleLanguage(lang) {
+      const langs = document.querySelectorAll('[data-lang]');
+      langs.forEach(el => el.style.display = 'none');
+      document.querySelector(`[data-lang="${lang}"]`).style.display = 'block';
+    }
+    window.onload = () => toggleLanguage('sv');
+  </script>
 </body>
 </html>
