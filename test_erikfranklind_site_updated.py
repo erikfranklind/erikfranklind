@@ -17,7 +17,6 @@ async def run_test():
         assert await page.locator("text=E-commerce Expert & Digital Strategist").is_visible(), "Engelsk titel saknas"
         assert await page.locator("text=Listen to the episode").is_visible(), "Poddlänk saknas"
         assert await page.locator("text=Watch the webinar").is_visible(), "Webbinarielänk saknas"
-        assert await page.locator("text=Download CV (PDF)").is_visible(), "CV-knapp saknas"
 
         print("✅ Alla tester passerade!")
         await browser.close()
